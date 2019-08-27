@@ -1,6 +1,10 @@
 package cn.tedu.shoot;
+
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 /** 小敌机: 是飞行物，也能得分 */
 public class Airplane extends FlyingObject implements Enemy, Serializable {
@@ -29,6 +33,7 @@ public class Airplane extends FlyingObject implements Enemy, Serializable {
 	private static BufferedImage[] images;
 	static {
 		images = new BufferedImage[5];
+        int a = 0;                        //第三次动的地方666
 		for(int i=0;i<images.length;i++) {
 			images[i] = readImage("airplane"+i+".png");
 		}
