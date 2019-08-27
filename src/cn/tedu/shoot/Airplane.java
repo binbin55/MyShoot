@@ -36,10 +36,10 @@ public class Airplane extends FlyingObject implements Enemy, Serializable {
 	private int speed; //移动速度
 	/** 构造方法 */
 	public Airplane(){
-		super(49,36);
+		super(49,36);         //彬修改的地方
 		speed = 2;
 	}
-	
+
 	/** 重写step()移动 */
 	public void step() {
 		y+=speed; //y+(向下)
